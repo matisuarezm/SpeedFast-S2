@@ -2,8 +2,8 @@ package main.java.cl.speedFast.model;
 
 public class PedidoExpress extends Pedido{
 
-    public PedidoExpress(String idPedido, String direccionEntrega, String tipoPedido) {
-        super(idPedido, direccionEntrega, tipoPedido);
+    public PedidoExpress(String idPedido, String direccionEntrega, String tipoPedido, Double distanciaKm) {
+        super(idPedido, direccionEntrega, tipoPedido, distanciaKm);
     }
 
     @Override
@@ -20,5 +20,12 @@ public class PedidoExpress extends Pedido{
         System.out.println("-> Pedido en camino - entregado por: " + nombreRepartidor);
     }
 
-
+    @Override
+    protected void calcularTiempoEntrega() {
+        int tiempoEntrega = 10;
+        if (getDistanciaKm() > 5){
+            tiempoEntrega += 5;
+        }
+        System.out.println("Tiempo estimado de entrega: " + tiempoEntrega + " minutos");
+    }
 }

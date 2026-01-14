@@ -1,22 +1,24 @@
-# 📘 Proyecto: SpeedFast - Semana 1
+# 📘 Proyecto: SpeedFast - Semana 2
 
 ## 📝 Descripción general del sistema
 
-Se solicita crear un sistema para la empresa SpeedFast, la cual es una empresa de reparto a domicilio que ofrece tras tipos de servicios. Entre ellos la entrega de "Comida", que corresponde a compras en restaurantes, además la entrega de "Encomiendas", correspondiente a todo tipo de documentos o paquetes y finalmente "Compras Express", que se encarga del reparto de compras en supermercado y farmacia.
-Para el desarrolo se utiliza JAVA como lenguaje de programación y se implementa una jerarquía de clases aplicando polimorfismo, sobrecarga y sobrescritura de métodos.
+Se solicita crear un sistema para la empresa SpeedFast, la cual es una empresa de reparto a domicilio que ofrece tres tipos de servicios. Entre ellos la entrega de "Comida", que corresponde a compras en restaurantes, además la entrega de "Encomiendas", correspondiente a todo tipo de documentos o paquetes y finalmente "Compras Express", que se encarga del reparto de compras en supermercado y farmacia.
+Para el desarrolo se utiliza JAVA como lenguaje de programación y se implementa una jerarquía de clases aplicando abstracción, polimorfismo, sobrecarga y sobrescritura de métodos.
+
+En esta nueva entrega de la semana 2, se modifican y agregan conceptos de abstración en clase principal `Pedido` y un metodo que sobreescriben las clases que lo heredan. 
 
 ---
 ## 🧱 Estructura general del proyecto
 
 ```
-📦 SpeedFast-S1/
+📦 SpeedFast-S2/
 ┣ 📂 .idea/
 ┣ 📂 src/main/java/cl/speedFast
 ┃ ┣ 📂 model/
-┃ ┃ ┣ 📊 Pedido.java		            #Clase base con información general para herencia.
-┃ ┃ ┣ 📊 PedidoComida.java		        #Clase heredada de Pedido, con lógica propia.
-┃ ┃ ┣ 📊 PedidoEncomienda.java		    #Clase heredada de Pedido, con lógica propia.
-┃ ┃ ┣ 📊 PedidoExpress.java		        #Clase heredada de Pedido, con lógica propia.
+┃ ┃ ┣ 📊 Pedido.java		            #Clase abstracta base con información general para herencia y método abstracto.
+┃ ┃ ┣ 📊 PedidoComida.java		        #Clase heredada de Pedido, con lógica propia y definición de metodo abstracto.
+┃ ┃ ┣ 📊 PedidoEncomienda.java		    #Clase heredada de Pedido, con lógica propia y definición de metodo abstracto.
+┃ ┃ ┣ 📊 PedidoExpress.java		        #Clase heredada de Pedido, con lógica propia y definición de metodo abstracto.
 ┃ ┣ 📂 ui/
 ┃ ┃ ┣ 📊 Main.java		                #Punto de entrada y ejecución principal (Main.java).
 ┃ 📜 README.md
@@ -54,7 +56,9 @@ git clone https://github.com/matisuarezm/SpeedFast-S1.git
 - Abre la clase `Main.java` del paquete `ui`
 - Puedes ejecutar el proyecto.
 
-	> Nota: Al ejecutar la clase Main.java se mostrarán los resultados por la consola.
+	> Nota: Al ejecutar la clase Main.java se mostrarán los resultados por la consola como muestra la imagen.
+
+![Salida por Consola](/img/imagen.png)
 
 ---
 

@@ -2,8 +2,8 @@ package main.java.cl.speedFast.model;
 
 public class PedidoEncomienda extends Pedido{
 
-    public PedidoEncomienda(String idPedido, String direccionEntrega, String tipoPedido) {
-        super(idPedido, direccionEntrega, tipoPedido);
+    public PedidoEncomienda(String idPedido, String direccionEntrega, String tipoPedido, Double distanciaKm) {
+        super(idPedido, direccionEntrega, tipoPedido, distanciaKm);
     }
 
     @Override
@@ -20,4 +20,14 @@ public class PedidoEncomienda extends Pedido{
         System.out.println("-> Pedido en camino - entregado por: " + nombreRepartidor);
     }
 
+    @Override
+    protected void calcularTiempoEntrega() {
+        int tiempoBase = 20;
+        int tiempoDistancia = 0;
+        if (getDistanciaKm() > 1){
+            tiempoDistancia = (int) Math.round(getDistanciaKm() * 1.5) ;
+        }
+        int tiempoEntrega = tiempoBase + tiempoDistancia;
+        System.out.println("Tiempo estimado de entrega: " + tiempoEntrega + " minutos");
+    }
 }
