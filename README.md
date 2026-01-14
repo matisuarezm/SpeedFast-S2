@@ -58,7 +58,7 @@ git clone https://github.com/matisuarezm/SpeedFast-S1.git
 
 	> Nota: Al ejecutar la clase Main.java se mostrarán los resultados por la consola como muestra la imagen.
 
-![Salida por Consola](/img/imagen.png)
+    ![Salida por Consola](/img/imagen.png)
 
 ---
 
